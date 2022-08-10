@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>User_detail_form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap-grid.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='js/bootstrap.bundle.js'></script>
+    <script src='js/bootstrap.js.map'></script>
+</head>
+<body>
+    <div class="container p-5 mt-5">
+    <form class="form p-0">
+        <p class="ml-0"><h1>&nbsp;Step 1 : Your Details</h1></p>
+        <div class="form-group bg-heading mt-4 p-3">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="First and last Name " class="form-control col-md-10 float-end p-1" required>
+        </div>
+        <div class="form-group mt-1 bg-heading p-3">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control col-md-10 float-end p-1" placeholder="Example@domain.com" required>
+        </div>
+    <div class="form-group mt-1 bg-heading p-3">
+        <label>Phone </label>
+        <input type="text" name="phone" placeholder="+9999999999" class="form-control col-md-10 float-end p-1" required>
+    </div>
+
+        <p class="ml-0 mt-5"><h1>&nbsp;Step 2 : Delivery Address</h1></p>
+
+    <div class="form-group bg-heading mt-4 p-3" style="height:18vh">
+        <label>Address </label>
+        <textarea name="address" class="form-control col-md-10 float-end p-1" required></textarea>
+    </div>
+    <div class="form-group bg-heading mt-1 p-3">
+    <label>Post Code</label>
+        <input type="text" name="Post Code" class="form-control col-md-10 float-end p-1" required>
+        </div>
+        <div class="form-group mt-1 bg-heading p-3">
+        <label>Countery</label>
+        <input type="text" name="country" class="form-control col-md-10 float-end p-1" required>
+    </div>    
+    
+        <P class="ml-0 mt-5"><h1>&nbsp; Step 3 : Card Detail</h1></P>
+
+        <div class="form-group mt-1 bg-heading p-3">
+        <label>Card Type </label>
+        <br></br>
+        &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;
+        <input type="radio" name="Card Type" value="Visa" class="p-1">
+        <img src="image/3.png" alt="Visa" title="Visa" width="40px" height="25px" margin-top="5%">
+        <b style="font-size:large;">VISA</b> 
+        &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="Card Type" value="AmEx" class="p-1">
+        <img src="image/2.png" alt="AmEx" title="AmEx" width="40px" height="25px" margin-top="5%">
+        <B style="font-size:large;">AmEx</B>
+        &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="Card Type" value="MasterCard" class="p-1">
+        <img src="image/1.jpg" alt="mastercard" title="mastercard" width="40px" height="20px">
+       <b style="font-size:large;"> MasterCard </b>
+        </div>
+        <div class="form-group mt-1 bg-heading p-3">
+        <label>Card Number</label>
+        <input type="text" name="card Number" class="form-control col-md-10 float-end p-1">
+        </div>
+        <div class="form-group mt-1 bg-heading p-3">
+        <label>Security Code</label>
+        <input type="text" name="Security Code" class="form-control col-md-10 float-end p-1">
+        </div>
+        <div class="form-group mt-1 bg-heading p-3">
+        <label>Name on Card</label>
+        <input type="text" name="card Number" placeholder="Exact name as on the card " class="form-control col-md-10 float-end p-1">
+    </div>
+    
+        <input type="submit" name="sub" value="BUY IT!" class="btn btn-lg btn-dark mt-4 p-2 text-md-center" id="btn">
+          </form>
+        </div>
+</body>
+</html>

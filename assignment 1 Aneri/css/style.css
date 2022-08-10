@@ -1,0 +1,26 @@
+.container
+{
+    background-color: #d0e340;
+    
+}
+.form 
+{
+    padding: 15px;
+}
+.bg-heading
+{
+    width: 100%;
+    height: auto;
+    background: rgba(0,50,0,0.1);
+    border: solid 3px white;
+    border-radius: 16px !important;
+   
+}
+#btn 
+{
+    width: 200px;
+    height: auto;
+    border-radius: 30px;
+    margin-left: 45%;
+}
+
