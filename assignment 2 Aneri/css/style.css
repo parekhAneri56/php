@@ -1,0 +1,31 @@
+body 
+{
+    background-color: #a218ba;
+}
+.rounded-circle 
+{
+    width: 250px;
+    height: 250px;
+}
+
+#btn1 
+{
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: #0a070b;
+    color: white;
+    border: none;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+@media only screen and (min-width:320px) and (max-width:480px)
+{
+    .container
+    {
+        width: 90% !important;
+        height: auto;
+        margin: auto;
+    }
+    
+} 

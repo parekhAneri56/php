@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Profile</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap-grid.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='js/bootstrap.bundle.js'></script>
+    <script src='js/bootstrap.js.map'></script>
+    
+</head>
+<body>
+    <div class="container p-5 mt-3 bg-white rounded-3">
+        <div class="row">
+            <div class="col-md-3 border-end  border-2">
+                <center>
+                <img src="images/1.jpg" class="img-fluid rounded-circle">
+                <br>
+                <p>Amelly<br>Amelly12@bbb.com</p>
+                </center>
+            </div>
+            <div class="col-md-5  border-end  border-2">
+                <h5>Profile Setting</h5>
+                <form method="post">
+                    <div class="row">
+                        <div class="form-group col-md-6">Name
+                           <input type="text" name="fname" placeholder="First Name " class="form-control">
+                         </div>     
+                         
+                        <div class="form-group col-md-6">Surname
+                           <input type="text" name="lname" placeholder="SurName" class="form-control"> 
+                        </div>
+                        <div class="form-group col-md-12 mt-2">Phone Number
+                            <input type="text" name="lname" placeholder="Enter your phone number" class="form-control"> 
+                         </div>
+   
+                         <div class="form-group col-md-12 mt-2"> Address
+                            <input type="text" name="email" placeholder="Enter Address" class="form-control"> 
+                         </div>
+
+                        <div class="form-group col-md-12 mt-2"> Email Id
+                            <input type="text" name="email" placeholder="Enter Email id" class="form-control"> 
+                         </div>
+                         
+                        <div class="form-group col-md-12 mt-2"> Education
+                            <input type="text" name="Education" placeholder="Education" class="form-control"> 
+                         </div>
+
+                         <div class="row mt-2">
+                            <div class="form-group col-md-6">
+                               <select name="country" placeholder="Country " class="form-control">
+                                <option value="">-select country-</option>
+                                <option value="1">India</option>
+                                <option value="2">Canada</option>
+                                <option value="3">Belgium</option>
+                                <option value="4">france</option>
+                                <option value="5">Albania</option>
+                               </select>
+                             </div>     
+                             
+                             <div class="form-group col-md-6">
+                                <select name="state" placeholder="State *" class="form-control">
+                                 <option value="">-select state-</option>
+                                 <option value="1">Gujrat</option>
+                                 <option value="2">Uttar Pradesh</option>
+                                 <option value="3">Maharashtra</option>
+                                 <option value="4">Kerala</option>
+                                 <option value="5">Odisha</option>  
+                                </select>
+                              </div>     
+                            </div>
+                            <div class="form-group col-md-12 mt-2">
+                                <input type="submit" name="save" class="btn  btn-lg" value="save profile" id="btn1"> 
+                             </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="row mt-2">
+                    <div class="form-group col-md-6">
+                <h5>Edit Experience</h5>
+            </div>
+            <div class="form-group col-md-6">                      
+                <input type="text" name="Experience" placeholder="Experience" class="form-control">
+            </div>
+            <div class="form-group col-md-12 mt-2">Experience in Designing
+                <input type="text" name="Experience" placeholder="Experience" class="form-control"> 
+             </div>
+             <div class="form-group col-md-12 mt-2">Additional Details
+                <input type="text" name="Details" placeholder="Additional Details" class="form-control"> 
+             </div>
+        </div>
+        </div>
+
+          </body>
+</html>
