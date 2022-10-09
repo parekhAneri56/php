@@ -1,0 +1,114 @@
+SQL Assignment Answer:
+
+TASK - 1
+
+Q1) CREATE DATABASE tops_Technology;
+
+Q2) CREATE TABLE employee
+(
+em_id int PRIMARY KEY AUTO_INCREMENT,
+    FIRST_NAME VARCHAR(155),
+    LAST_NAME VARCHAR(155),
+    SALARY float,
+    JOINING_DATE date,
+    DEPARTMENT VARCHAR(255)
+);
+
+Q3) insert into employee (em_id,FIRST_NAME,LAST_NAME,SALARY,JOINING_DATE,DEPARTMENT) VALUES (1,'Aneri','Parekh',1000000,2013-01-01,'Banking'), (2,'Mahek','Parekh',800000,2013-01-01,'Insurance'),(3,'Roy','Thomas',700000,2013-02-01,'Banking'),(4,'Yashpal','Jose',600000,2013-02-01,'Insurance'),(5,'Jerry','Pinto',650000,2013-01-01,'Insurance'),(6,'Parth','Mathew',750000,2013-01-01,'Services'),(7,'John','Abraham',650000,2013-01-01,'Services'),(8,'Michael','Clerk',600000,2013-02-01,'Insurance')
+
+Q4) create table Incentives 
+(
+    incentive_id int AUTO_INCREMENT Primary key,
+    em_id int REFERENCES employee(em_id),
+    incentive_date Date,
+    incentive_amount float
+    );
+
+Q5) INSERT into incentives ( incentive_id,em_id,incentive_date,incentive_amount) values (1,'2013-02-01','5000'),(2,'2013-02-01','3000'),(3,'2013-02-01','4000'),(4,'2013-01-01','4500'),(5,'2013-01-01','3500')
+
+Q6) SELECT FIRST_NAME as Employee_Name from employee;
+
+Q7) SELECT FIRST_NAME,JOINING_DATE from employee;
+
+Q8) select * from employee order by FIRST_NAME and SALARY desc;
+
+Q9) select * from employee where FIRST_NAME like 'O%';
+
+Q10) select * from employee where JOINING_DATE='2013-01-01';
+
+Q11) Select DEPARTMENT,sum(SALARY) Total_Salary from employee group by DEPARTMENT order by Total_Salary desc;
+
+OR
+
+Select b.DEPARTMENT, count(a.FIRST_NAME), sum(a.Salary) total_salary from employee a , employee b where a.em_id = b.em_id group by b.DEPARTMENT order by total_salary desc;
+
+OR
+
+select sum(salary) total_salary,department from employee GROUP by department order by total_salary desc;
+
+Q12) Select DEPARTMENT, MAX(SALARY) Maximum_Salary from employee group by DEPARTMENT order by Maximum_Salary;
+
+Q13) select employee.*,incentive_amount from employee join incentives on employee.em_id=incentives.em_id where incentive_amount >3000; 
+
+Q14) select max(salary) from employee where salary < (select max(salary) from employee);
+
+Q15)select employee.*,FIRST_NAME,incentive_amount from employee  left join incentives on employee.em_id=incentives.em_id ;
+
+Q16) Select DEPARTMENT, MAX(SALARY) Maximum_Salary from employee group by DEPARTMENT order by Maximum_Salary;
+
+TASK - 2
+
+Q1)  CREATE table Sales_							person
+(
+    S_no int PRIMARY KEY AUTO_INCREMENT,
+    S_name varchar(255),
+    City varchar(255),
+    Comm float
+    );
+
+Q2) INSERT into sales_person ( S_no,S_name,City,Comm) values (1001,'peel','london','0.12'),(1002,'Serres','San_jose','0.13'),(1003,'Axelrod','New_yrok','0.1'),(1004,'Motika','london','0.11'),(1005,'Rafkin','Barcelona','0.15')
+
+Q3) CREATE table Customer
+(
+    C_nm int PRIMARY KEY AUTO_INCREMENT,
+    C_name varchar(255),
+    City varchar(255),
+    Rating int(155),
+    S_no int REFERENCES sales_person(S_no)
+    );
+
+Q4)  CREATE table Orders
+(
+    ONM int PRIMARY KEY AUTO_INCREMENT,
+    amt float,
+    ode date,
+    c_nm int REFERENCES customer(C_nm),
+    S_no int REFERENCES sales_person(S_no)
+    );
+
+Q5) select Amt from orders where amt > 1000;
+
+Q6) SELECT s_name,city,comm from sales_person where city='london' and comm>'0.10';
+
+Q7) select * from sales_person where city in ('london','barcelona');
+
+Q8) Select s_name, comm from sales_person where comm > 0.10 and comm < 0.12;
+
+AND
+
+select * from flip_employee where empid between 4 and 11;
+
+Q9) Select C_name from customer where city is null;
+
+Q10) SELECT * from orders WHERE ode in ('1994-10-03','1994-10-04');
+
+Q11) select sales_person.*,S_name,c_name from sales_person inner join customer on sales_person.S_no=customer.S_no inner join orders on sales_person.S_no=orders.s_no in (SELECT s_no from sales_person WHERE s_no in ('peel','motika'));
+
+Q12)select * from customer where c_name like 'a%b';
+
+Q13)Select c_name from customer where Rating <= 100 or City = 'Rome';
+
+Q14)Select onm from orders where Amt != 0 or Amt is not null;
+
+Q15)select count(S_no) as total_numberof_sales_person from orders; 
+
