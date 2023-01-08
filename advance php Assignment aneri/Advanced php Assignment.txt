@@ -1,0 +1,162 @@
+Q1) Oops stands for object oriented programming structured language
+oops used to support MVC concepts in php8
+
+Oops used to crate a dynamic web application or website in PHP8 using MVC architecture.
+Oops provides security to secured your applications 
+Oops used some magic methods 
+Ex: __construct, __destruct etc
+Oops used to protect your data using access modifier and access specifier 
+a)	Public 
+b)	Private 
+c)	Protected 
+
+Q2) oops Properties
+
+oops support some features 
+a)	Class
+b)	Object
+c)	Inheritance
+d)	Polymorphism
+e)	Abstract
+f)	Encapsulation
+
+Q3) difference between Abstract class and interface
+
+=> Abstract Class
+
+1) Definition: A abstract class is same name of class but we never call the object of abstract class but 
+we access abstract with inherited with another class. abstract is used to data hiding process 
+
+2) Abstract Class doesn't support multiple inheritances.
+
+3) They contain Data Members
+
+4) An abstract class contains both abstract and non-abstract members.
+
+5) Abstract class contains constructors.
+
+6) Complete member of an abstract class can be static
+
+7)  It contains access modifiers for the subs, functions, and properties.
+
+
+=> Interface
+
+1) Definition: An interface allows unrelated classes to implement the same set of methods, regardless of their positions in the class inheritance hierarchy.
+
+2) Interfaces support multiple inheritances.
+
+3) They don't contain data members.
+
+4) The interface contains only abstract members.
+
+5) These don't contain constructors.
+
+6) Members of the interface can not be static.
+
+7)  It doesn't access modifiers, by default everything is public.
+
+Q4) Overloading :
+
+Overloading in PHP provides means to dynamically create properties and methods.
+
+These dynamic entities are processed via magic methods, one can establish in a class for various action types.
+
+All overloading methods must be defined as Public.
+
+After creating object for a class, we can access set of entities that are properties or methods not defined within the scope of the class.
+
+Such entities are said to be overloaded properties or methods, and the process is called as overloading.
+For working with these overloaded properties or functions, PHP magic methods are used.
+
+Most of the magic methods will be triggered in object context except __callStatic() method which is used in static context.
+
+OVERLOADING : 
+
+Property overloading :
+
+PHP property overloading allows us to create dynamic properties in object context.
+
+For creating those properties no separate line of code is needed.
+
+A property which is associated with class instance, and not declared within the scope of the class, is considered as overloaded property.
+
+Some of the magic methods which is useful for property overloading.
+
+__set(): It is triggered while initializing overloaded properties.
+__get(): It is utilized for reading data from inaccessible Properties.
+__isset(): This magic method is invoked when we check overloaded properties with isset() function.
+__unset(): This function will be invoked on using PHP unset() for overloaded properties.
+
+Method Overloading : 
+
+Method Overloading means same function with different arguments its called method overloading.
+php does not support method overloading 
+
+Q5) What Is T_PAAMAYIM_NEKUDOTAYIM (Scope Resolution Operator (::) with Example?
+
+Those are both essentially the same “sadness” being reported, that an unrecognisable token used to display instead of showing something useful.
+ For those of you who don’t know, in PHP T_PAAMAYIM_NEKUDOTAYIM is the token name for ::, the static separator. It’s Hebrew for double colon.
+
+ Both of these have been “fixed” in PHP 5.4, but only partially. There is a little caveat in both:
+
+ PHP 5.4 still calls it T_PAAMAYIM_NEKUDOTAYIM, but includes ’::’ in the error message, making it only mildly less confusing
+
+ Everything in PHP is broken down from literal symbols into tokens, like T_IF, T_ELSE, T_STRING, T_SL and of course 
+ the crazy-looking T_PAAMAYIM_NEKUDOTAYIM. These are then handled by the parser,
+ and if an unexpected order of things turns up you get an error message. That error message always used to be:
+
+    Parse error: syntax error, unexpected (T_PAAMAYIM_NEKUDOTAYIM)
+
+Since PHP 5.4 the output is:
+
+    Parse error: syntax error, unexpected ’::’ (T_PAAMAYIM_NEKUDOTAYIM)
+
+
+
+
+
+Q6)  
+
+Constructor:
+Constructor is a same name of class. when we call an object of any class Constructor automatically called. 
+
+A constructor allows you to initialize an object's properties upon creation of the object. 
+
+If you create a __construct() function, PHP will automatically call this function when you create an object from a class.
+
+constructor starts with two underscores (__)!
+
+destructor :
+A destructor is called when the object is destructed or the script is stopped or exited.
+
+If you create a __destruct() function, PHP will automatically call this function at the end of the script.
+
+Notice that the destruct function starts with two underscores (__)!
+
+Q11) What Happen, If Constructor Is Defined As Private Or Protected?
+
+ private constructors prevent you from creating an instance with the new keyword, but PHP will trigger a fatal error
+(it won't just stop running):
+ 
+ The __construct() method will need to be public as it is accessed (publically) when an instance of the class is created
+ 
+ Constructor is used for object creation and initialization.If constructor is declared private that means constructor cannot be called 
+ outside the scope of class. so the objects of class having private constructor can neither be created nor can be initialized.
+
+ The purpose of a private or protected constructor is to prevent the class from being instantiated from outside of the class.
+
+You could create a public static function in the class that returns a new object, but you cannot create it directly 
+if you want to have the constructor be protected or private. You must have something declared as public or you cannot use the class.
+
+Q12)
+
+
+
+
+
+
+
+
+
+
